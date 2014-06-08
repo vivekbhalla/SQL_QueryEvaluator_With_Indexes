@@ -24,16 +24,18 @@ and Secondary{Hash,Tree}Map.
 For the pre-computation phase (first phase)
 Example invocation
 
-  java -Xmx1024m -cp build:jsqlparser.jar:jdbm2.jar edu.buffalo.cse562.Main --build --data /tmp/data --index /tmp/index tpch-schema.sql
+    java -Xmx1024m -cp build:jsqlparser.jar:jdbm2.jar edu.buffalo.cse562.Main --build --data /tmp/data --index /tmp/index tpch-schema.sql
 
 For the actual run (second phase)
 Example invocation
 
-  java -Xmx1024m -cp build:jsqlparser.jar:jdbm2.jar edu.buffalo.cse562.Main --data /tmp/data --index /tmp/index tpch-schema.sql tphc07a.sql..
+    java -Xmx1024m -cp build:jsqlparser.jar:jdbm2.jar edu.buffalo.cse562.Main --data /tmp/data --index /tmp/index     tpch-schema.sql tphc07a.sql..
 
 The examples use the following directories and files
-  • --build: The build flag indicates that it is the first phase.
-  • /tmp/data: Table data stored in '|' separated files. Table names match the names provided in the matching CREATE TABLE with the .dat suffix.
-  • /tmp/index: A directory that will persist throughout the entire grading process. Store precomputations here.
-  • tpch-schema.sql: A file containing the CREATE TABLE statements for all tables in the TPC-H schema.
-  • tphc07a.sql – A sql file containing the Select Query.
+
+    • --build: The build flag indicates that it is the first phase.
+    • /tmp/data: Table data stored in '|' separated files. Table names match the names provided in the matching
+      CREATE  TABLE with the .dat suffix.
+    • /tmp/index: A directory that will persist throughout the entire grading process. Store precomputations here.
+    • tpch-schema.sql: A file containing the CREATE TABLE statements for all tables in the TPC-H schema.
+    • tphc07a.sql – A sql file containing the Select Query.
